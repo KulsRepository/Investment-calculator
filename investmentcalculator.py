@@ -1,6 +1,8 @@
 import inflationrate as ir
+import generaldata as gd
 Age = int(input("Enter your age ")) #22
-year = 2002+29
+year_of_birth = gd.current_year - Age
+year = year_of_birth + Age
 
 
 def calculator(init_inv, choose, next_inv, r, j):
