@@ -1,7 +1,7 @@
 import inflationrate as ir
 import generaldata as gd
 Age = int(input("Enter your age ")) #22
-inflationmatching = str(input("Do they match your salary to inflation? "))
+inflationmatching = str(input("Do they match your salary to inflation? ")) #'yes'
 year_of_birth = gd.current_year - Age
 year = year_of_birth + Age
 
@@ -45,11 +45,9 @@ def investmentcalculator(init_inv, choose, next_inv, r, gos_at_it, roi_growth, i
 		the {choose} year investment plan started with {calculator.year}
 																		""")
 		calculator(calculator.year, choose, next_inv*income_growth*investmentcalculator.j, r*roi_growth, investmentcalculator.j, inflationmatching)
-#I know r*roi_growth only tops up once but It's actually better this way.		
 
 
-
-investmentcalculator(100000, 10, 50000, 1.08, 3, 1.01, 1.5, inflationmatching)
+investmentcalculator(30000, 10, 5000, 1.08, 4, 1.01, 4, inflationmatching)
 
 print(f"""I will have {int(calculator.year)}$ USD at the age of {Age+investmentcalculator.j*calculator.i}
 That is worth {int(calculator.year/(ir.inflationrate**(investmentcalculator.j*calculator.i)))}$ USD now.""")
