@@ -72,7 +72,7 @@ if Director == 'specific':
 	print("You will be asked about how many years all desired sections will be. When you desire to halt the program, simply write the number 0.")
 	inp = int(input("How many years will the first section be? "))
 	investmentcalculator(0,0,0,0,0,0,0,0)
-	print("ignore this, input ur data now, Ill fix this later.")
+	print("ignore this, input your data now, Ill fix this later.")
 	calculator(init_inv, inp, next_inv, r, gd.k, inflationmatching)
 	while inp != 0:
 		calculator.Age = Age + inp
